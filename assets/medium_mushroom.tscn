@@ -3,13 +3,13 @@
 [ext_resource type="Script" uid="uid://carbatgfsdlnn" path="res://assets/scripts/medium_mushroom.gd" id="1_6wy27"]
 [ext_resource type="Texture2D" uid="uid://dukojugnshdr" path="res://assets/images/BigJump64x32-Sheet.png" id="1_fbfky"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6wy27"]
-atlas = ExtResource("1_fbfky")
-region = Rect2(128, 0, 64, 32)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_unqv8"]
 atlas = ExtResource("1_fbfky")
 region = Rect2(64, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6wy27"]
+atlas = ExtResource("1_fbfky")
+region = Rect2(128, 0, 64, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_msnvk"]
 atlas = ExtResource("1_fbfky")
@@ -19,23 +19,23 @@ region = Rect2(0, 0, 64, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6wy27")
+"texture": SubResource("AtlasTexture_unqv8")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_unqv8")
+"texture": SubResource("AtlasTexture_6wy27")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_msnvk")
 }],
-"loop": false,
+"loop": 0,
 "name": &"bounce",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_msnvk")
 }],
-"loop": false,
+"loop": 0,
 "name": &"default",
 "speed": 5.0
 }]
@@ -53,8 +53,6 @@ scale = Vector2(2.1274698, 2.1199985)
 sprite_frames = SubResource("SpriteFrames_xdb0c")
 animation = &"bounce"
 autoplay = "default"
-frame = 2
-frame_progress = 1.0
 
 [node name="Area2D" type="Area2D" parent="." unique_id=792390828]
 position = Vector2(9, 7)
