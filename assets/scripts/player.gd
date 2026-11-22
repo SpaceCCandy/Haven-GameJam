@@ -1,18 +1,26 @@
 extends CharacterBody2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 const XACCELERATION = 10
 =======
 const ACCELX = 20.0
 const TERMINALVX = 300
 >>>>>>> Stashed changes
+=======
+const XACCELERATION = 1
+>>>>>>> dcb13a4f49a597941815740b3f6cb9c5d22cfc31
 const JUMP_VELOCITY = -600
 const JUMP_PAD = -1800
 const XTERMINAL_SPEED = 300
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 var XSPEED
+=======
+var XSPEED = 0
+>>>>>>> dcb13a4f49a597941815740b3f6cb9c5d22cfc31
 
 =======
 >>>>>>> Stashed changes
@@ -41,6 +49,7 @@ func _physics_process(delta: float) -> void:
 			XSPEED += XACCELERATION
 		velocity.x = direction * XSPEED
 	else:
+		XSPEED = 0
 		velocity.x = move_toward(velocity.x, 0, XSPEED)
 =======
 		if is_on_floor():
