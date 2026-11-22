@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://b6ddabu0no81t"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vsb4k"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lti8b"]
+bg_color = Color(0.17640328, 0.2112146, 0.11202144, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.22352941)
+shadow_size = 4
+shadow_offset = Vector2(2, 2)
+
+[node name="menu" type="Control" unique_id=777594473]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=1306553919]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_vsb4k")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1850194813]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -236.25
+offset_top = -91.0
+offset_right = 236.25
+offset_bottom = 168.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+
+[node name="Start_btn" type="Button" parent="VBoxContainer" unique_id=57511846]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_lti8b")
+text = "Start"
+
+[node name="Settings_btn" type="Button" parent="VBoxContainer" unique_id=293175812]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_lti8b")
+text = "Settings"
+
+[node name="Credits_btn" type="Button" parent="VBoxContainer" unique_id=702121493]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_lti8b")
+text = "Credits
+"
