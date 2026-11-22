@@ -27,7 +27,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_j6slw")
 }],
-"loop": 2,
+"loop": 0,
 "name": &"bounce",
 "speed": 5.0
 }, {
@@ -41,14 +41,14 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p1u0j"]
-radius = 5.0
-height = 10.0
+radius = 4.148148
+height = 10.074075
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p1u0j"]
-size = Vector2(26, 20)
+size = Vector2(32.02778, 23.444447)
 
 [node name="pushable_mushroom" type="RigidBody2D" unique_id=1396121142]
-scale = Vector2(2, 2)
+scale = Vector2(1.5, 1.5)
 collision_layer = 2
 collision_mask = 3
 mass = 6.062
@@ -57,22 +57,22 @@ script = ExtResource("1_t4ulp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1478865495]
 texture_filter = 1
-scale = Vector2(2, 2)
+scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_p1u0j")
 animation = &"bounce"
 autoplay = "default"
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1798233576]
-scale = Vector2(2, 2)
+scale = Vector2(1.5, 1.5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=672281464]
-position = Vector2(0, -6)
-scale = Vector2(2, 2)
+position = Vector2(0, -8.444445)
+scale = Vector2(2.566666, 0.7355554)
 shape = SubResource("CapsuleShape2D_p1u0j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=881875264]
-position = Vector2(0, 10.5)
-scale = Vector2(2, 2)
+position = Vector2(0.020832896, 5.583334)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_p1u0j")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
