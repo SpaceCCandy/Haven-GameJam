@@ -1,12 +1,12 @@
 extends CharacterBody2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
-const XACCELERATION = 10
+const XACCELERATION = 1
 const JUMP_VELOCITY = -600
 const JUMP_PAD = -1800
 const XTERMINAL_SPEED = 300
 
-var XSPEED
+var XSPEED = 0
 
 func _physics_process(delta: float) -> void:
 		# Animation
@@ -32,6 +32,7 @@ func _physics_process(delta: float) -> void:
 			XSPEED += XACCELERATION
 		velocity.x = direction * XSPEED
 	else:
+		XSPEED = 0
 		velocity.x = move_toward(velocity.x, 0, XSPEED)
 
 	move_and_slide()
