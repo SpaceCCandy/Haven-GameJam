@@ -1,5 +1,6 @@
 extends CharacterBody2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var angry_bird: AudioStreamPlayer2D = $Angry_bird
 
 const JUMP_VELOCITY = -600.0
 const JUMP_PAD = -1800.0
@@ -62,6 +63,7 @@ func _physics_process(delta: float) -> void:
 	# Falling mech	
 	if global_position.y > fall_limit and !bounce_back:
 		bounce_back = true
+		$Angry_bird.play()
 		velocity.y = bounceV
 		set_collision_mask_value(1, false)
 		set_collision_layer_value(2, true)

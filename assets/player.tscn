@@ -64,3 +64,7 @@ metadata/_edit_group_ = true
 [node name="Camera2D" type="Camera2D" parent="." unique_id=475833696]
 scale = Vector2(2.7600002, 1)
 limit_left = 0
+limit_bottom = 700
+
+[node name="Angry_bird" type="AudioStreamPlayer2D" parent="." unique_id=876011946]
+scale = Vector2(2.7600002, 1)
