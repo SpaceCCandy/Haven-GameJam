@@ -12,4 +12,4 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 	
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("interact"):
-		pass
+		get_tree().change_scene_to_file("res://assets/menu.tscn")

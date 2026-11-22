@@ -44,6 +44,7 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D" unique_id=1048597667]
+collision_layer = 3
 script = ExtResource("1_nsdob")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=393086574]
@@ -62,3 +63,4 @@ metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=475833696]
 scale = Vector2(2.7600002, 1)
+limit_left = 0

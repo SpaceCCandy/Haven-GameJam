@@ -7,6 +7,10 @@ const JUMP_PAD = -1800.0
 const XTERMINAL_SPEED = 300.0
 const XACCELERATION = 40.0
 
+var bounce_back = false
+var fall_limit = 800
+var fall_return = 200
+var bounceV = -1600
 # Input buffer timer
 var i_b_timer
 
@@ -54,9 +58,20 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, XACCELERATION)
 	else:
 		velocity.x = move_toward(velocity.x, 0, XACCELERATION*0.1)
+		
+	# Falling mech	
+	if global_position.y > fall_limit and !bounce_back:
+		bounce_back = true
+		velocity.y = bounceV
+		set_collision_mask_value(1, false)
+		set_collision_layer_value(2, true)
 	
-	if global_position.y < -500 :
-		print("oof")
+	if global_position.y < fall_limit - fall_return and bounce_back:
+		bounce_back = false
+		await get_tree().create_timer(1.0).timeout
+		set_collision_mask_value(1, true)
+		set_collision_layer_value(2, false)
+		
 	
 	move_and_slide()
 	
