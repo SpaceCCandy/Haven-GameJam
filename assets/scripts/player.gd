@@ -2,7 +2,7 @@ extends CharacterBody2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var angry_bird: AudioStreamPlayer2D = $Angry_bird
 
-const JUMP_VELOCITY = -600.0
+const JUMP_VELOCITY = 600.0
 const JUMP_PAD = -1800.0
 
 const XTERMINAL_SPEED = 300.0
