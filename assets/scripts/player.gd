@@ -55,6 +55,9 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, XACCELERATION*0.1)
 	
+	if global_position.y < -500 :
+		print("oof")
+	
 	move_and_slide()
 	
 	if direction > 0:

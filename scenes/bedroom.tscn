@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b4535qmiqkqy2" path="res://assets/images/background/bedroom.png" id="1_kpde0"]
 [ext_resource type="PackedScene" uid="uid://lxlw1bssoedk" path="res://assets/player.tscn" id="2_e18cj"]
+[ext_resource type="PackedScene" uid="uid://dexspap4v6wd6" path="res://assets/interaction.tscn" id="3_e18cj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p1u0j"]
 size = Vector2(1280.5, 160.5)
@@ -21,3 +22,6 @@ shape = SubResource("RectangleShape2D_p1u0j")
 
 [node name="Player" parent="StaticBody2D" unique_id=1048597667 instance=ExtResource("2_e18cj")]
 position = Vector2(260, 194)
+
+[node name="interaction" parent="StaticBody2D" unique_id=2040118614 instance=ExtResource("3_e18cj")]
+position = Vector2(906, 557)
