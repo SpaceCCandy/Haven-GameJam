@@ -216,10 +216,10 @@ z_index = 1
 position = Vector2(-73, -59)
 
 [node name="Background" type="TextureRect" parent="." unique_id=449013452]
-offset_left = -223.0
-offset_top = -473.99997
-offset_right = 1051.0
-offset_bottom = 168.52621
+offset_left = -222.0
+offset_top = -510.99997
+offset_right = 1052.0
+offset_bottom = 131.52621
 scale = Vector2(1.0561736, 1.1579297)
 texture = ExtResource("3_6ej1o")
 

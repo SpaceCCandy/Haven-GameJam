@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://br2sjxgmi88w2"]
 
-[ext_resource type="Script" uid="uid://b4xbpduicgjog" path="res://small_mushroom.gd" id="1_rx03y"]
+[ext_resource type="Script" uid="uid://b4xbpduicgjog" path="res://assets/scripts/small_mushroom.gd" id="1_rx03y"]
 [ext_resource type="Texture2D" uid="uid://c2lcgmr2hgbgh" path="res://assets/images/Sprite-0001-Sheet.png" id="2_587j4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6ui5u"]

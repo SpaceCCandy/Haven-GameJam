@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://dexspap4v6wd6"]
+
+[ext_resource type="Script" uid="uid://50mskof6ahbp" path="res://assets/scripts/interaction.gd" id="1_ufho3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q5h3t"]
+
+[node name="interaction" type="Node2D" unique_id=2040118614]
+script = ExtResource("1_ufho3")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=575088545]
+scale = Vector2(2.6000009, 2.6000009)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=51031334]
+scale = Vector2(1.4800016, 1)
+shape = SubResource("CircleShape2D_q5h3t")
+
+[node name="Label" type="Label" parent="." unique_id=350853990]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -58.0
+offset_top = -98.0
+offset_right = 36.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.2399981, 1.2399981)
+text = "(E) to interact"
+horizontal_alignment = 1
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
