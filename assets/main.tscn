@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dlbdy7v6r4sdu"]
+
+[ext_resource type="PackedScene" uid="uid://r3i7wldtpcsk" path="res://assets/final_level.tscn" id="1_db5cl"]
+
+[node name="Main" type="Node2D" unique_id=780369604]
+position = Vector2(-57, 9)
+
+[node name="FinalLevel" parent="." unique_id=1043323847 instance=ExtResource("1_db5cl")]
+position = Vector2(200, 66)
