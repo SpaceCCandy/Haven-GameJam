@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://dnh8468e4o0g2"]
+
+[ext_resource type="Script" uid="uid://carbatgfsdlnn" path="res://assets/scripts/medium_mushroom.gd" id="1_6wy27"]
+[ext_resource type="Texture2D" uid="uid://dukojugnshdr" path="res://assets/images/BigJump64x32-Sheet.png" id="1_fbfky"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6wy27"]
+atlas = ExtResource("1_fbfky")
+region = Rect2(128, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_unqv8"]
+atlas = ExtResource("1_fbfky")
+region = Rect2(64, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_msnvk"]
+atlas = ExtResource("1_fbfky")
+region = Rect2(0, 0, 64, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xdb0c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6wy27")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_unqv8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_msnvk")
+}],
+"loop": false,
+"name": &"bounce",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_msnvk")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_32fn0"]
+radius = 12.92039
+height = 29.379765
+
+[node name="Medium_Mushroom" type="Node2D" unique_id=2122845706]
+script = ExtResource("1_6wy27")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1529952404]
+texture_filter = 1
+scale = Vector2(2.1274698, 2.1199985)
+sprite_frames = SubResource("SpriteFrames_xdb0c")
+animation = &"bounce"
+autoplay = "default"
+frame = 2
+frame_progress = 1.0
+
+[node name="Area2D" type="Area2D" parent="." unique_id=792390828]
+position = Vector2(9, 7)
+scale = Vector2(3.0874696, 1.3614812)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2042107667]
+position = Vector2(-2.9150088, -7.3449416)
+scale = Vector2(1.4790187, 0.8936939)
+shape = SubResource("CapsuleShape2D_32fn0")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
